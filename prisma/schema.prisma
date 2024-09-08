@@ -39,7 +39,7 @@ model Account{
   access_token String? @db.String
   expires_at Int?
   token_type String?
-  scopes String
+  scopes String? @db.String
   id_token String? @db.String
   session_state String? 
 
@@ -71,8 +71,7 @@ model Movie{
   title String
   videoUrl String
   thumbnailUrl String
-  rating Float
-  genre String[]
+  genre String
   description String
   duration String
 }
