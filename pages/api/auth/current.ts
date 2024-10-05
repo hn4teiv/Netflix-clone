@@ -1,5 +1,5 @@
 import { NextApiRequest,NextApiResponse } from "next";
-import severAuth from "@/lib/severAuth";
+import severAuth from "@/libs/severAuth";
 export default async function handler(req:NextApiRequest,res:NextApiResponse){
     if(req.method === "GET"){
         return res.status(405).end();
