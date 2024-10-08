@@ -1,18 +1,17 @@
 import useSwr from 'swr'
 import fetcher from '@/libs/fetcher';
 
-const useFavorites = () => {
-  const { data, error, isLoading, mutate } = useSwr('/api/favorites', fetcher, {
+const useBillboard = () => {
+  const { data, error, isLoading } = useSwr('/api/random', fetcher, { 
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false,
-  });
+   });
   return {
     data,
     error,
-    isLoading,
-    mutate
+    isLoading
   }
 };
 
-export default useFavorites;
+export default useBillboard;
